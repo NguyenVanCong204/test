@@ -51,7 +51,10 @@
                 android:padding="10dp">
 
                 <TextView
+<<<<<<< HEAD
                     android:id="@+id/tv_tenkhachsan_tt"
+=======
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
@@ -59,10 +62,17 @@
                     android:text="Khách sạn Mường Thanh Luxury Nha Trang"
                     android:textSize="20dp"
                     android:textStyle="bold">
+<<<<<<< HEAD
                 </TextView>
 
                 <TextView
                     android:id="@id/tv_tenphong_tt"
+=======
+
+                </TextView>
+
+                <TextView
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
@@ -85,7 +95,10 @@
                 </TextView>
 
                 <TextView
+<<<<<<< HEAD
                     android:id="@+id/tv_songuoi_tt"
+=======
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:alpha="0.5"
@@ -98,27 +111,41 @@
                 </TextView>
 
                 <TextView
+<<<<<<< HEAD
                     android:id="@+id/tv_ngaydat_tt"
+=======
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:alpha="0.5"
                     android:padding="2dp"
                     android:textColor="@color/black"
+<<<<<<< HEAD
 
+=======
+                    android:text="Ngày đặt phòng : 10/10/2024"
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
                     android:textSize="15dp"
                     android:textStyle="bold"
                     android:layout_marginLeft="10dp">
                 </TextView>
 
                 <TextView
+<<<<<<< HEAD
                     android:id="@+id/tv_ngaytra_tt"
+=======
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
                     android:alpha="0.5"
                     android:padding="2dp"
                     android:textColor="@color/black"
+<<<<<<< HEAD
 
+=======
+                    android:text="Ngày trả phòng : 11/10/2024"
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
                     android:textSize="15dp"
                     android:textStyle="bold"
                     android:layout_marginLeft="10dp">
@@ -192,12 +219,17 @@
                     >
                 </TextView>
                 <TextView
+<<<<<<< HEAD
                     android:id="@+id/tv_tenvoucher_after"
                     android:layout_width="match_parent"
+=======
+                    android:layout_width="wrap_content"
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
                     android:layout_height="wrap_content"
                     android:text="TCBDOMBAY"
                     android:layout_marginTop="3dp"
                     android:textSize="16dp"
+<<<<<<< HEAD
                     android:textStyle="bold"
                     android:layout_gravity="center"
                     android:layout_marginLeft="10dp"
@@ -220,6 +252,45 @@
                 android:layout_marginBottom="5dp">
             </TextView>
 
+=======
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#5A5A5A">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/voucher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Thêm"
+                    android:layout_marginTop="3dp"
+                    android:layout_gravity="center"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:textColor="#00CAFD"
+                    android:layout_marginLeft="150dp"
+                    android:layout_weight="1">
+
+                </TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/line_chonchuyenbay2"
+                android:layout_marginTop="2px">
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="- 200.000 VNĐ"
+                android:textSize="16dp"
+                android:textColor="#FF5722"
+                android:layout_marginBottom="5dp">
+
+            </TextView>
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
         </LinearLayout>
 
         <LinearLayout
@@ -294,7 +365,10 @@
 
 
             <TextView
+<<<<<<< HEAD
                 android:id="@+id/tv_tongtien_after"
+=======
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="end"

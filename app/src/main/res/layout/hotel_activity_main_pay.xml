@@ -51,7 +51,10 @@
                 android:padding="10dp">
 
                 <TextView
+<<<<<<< HEAD
                     android:id="@+id/tv_tenkhachsan_tt"
+=======
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
@@ -59,10 +62,17 @@
                     android:text="Khách sạn Mường Thanh Luxury Nha Trang"
                     android:textSize="20dp"
                     android:textStyle="bold">
+<<<<<<< HEAD
                 </TextView>
 
                 <TextView
                     android:id="@+id/tv_tenphong_tt"
+=======
+
+                </TextView>
+
+                <TextView
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
@@ -73,7 +83,10 @@
                 </TextView>
 
                 <TextView
+<<<<<<< HEAD
                     android:id="@+id/tv_sophong_tt"
+=======
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:alpha="0.5"
@@ -86,7 +99,10 @@
                 </TextView>
 
                 <TextView
+<<<<<<< HEAD
                     android:id="@+id/tv_songuoi_tt"
+=======
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:alpha="0.5"
@@ -99,7 +115,10 @@
                 </TextView>
 
                 <TextView
+<<<<<<< HEAD
                     android:id="@+id/tv_ngaydat_tt"
+=======
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:alpha="0.5"
@@ -112,7 +131,10 @@
                 </TextView>
 
                 <TextView
+<<<<<<< HEAD
                     android:id="@+id/tv_ngaytra_tt"
+=======
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
@@ -308,7 +330,10 @@
             </View>
 
             <TextView
+<<<<<<< HEAD
                 android:id="@+id/tv_tongtien_tt"
+=======
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="end"

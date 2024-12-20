@@ -1,5 +1,8 @@
 package com.example.a124lttd04_travelappproject.CongServices;
 
+
+import com.example.a124lttd04_travelappproject.model.flight.DatVeMayBayModel;
+
 import com.example.a124lttd04_travelappproject.model.flight.HanhLyModel;
 import com.example.a124lttd04_travelappproject.model.flight.NoidenModel;
 import com.example.a124lttd04_travelappproject.model.flight.NoidiModel;
@@ -21,7 +24,11 @@ import retrofit2.http.GET;
 import retrofit2.http.POST;
 
 public interface ApiService {
+
     String url = "http://192.168.3.5:3009/";
+
+
+
 
     @GET("noidia")
     Call<Response<ArrayList<plane_GiaVeNoiDia_Model>>> getListGiaVeNoiDia();
@@ -48,4 +55,7 @@ public interface ApiService {
 
     @POST("insert")
     Call<Response> Insert(@Body TaoTaiKhoanModel NewUserData);
+    @POST("insertdatvemaybay")
+    Call<Response> Insertdatvemaybay(@Body DatVeMayBayModel NewdatveData);
+
 }

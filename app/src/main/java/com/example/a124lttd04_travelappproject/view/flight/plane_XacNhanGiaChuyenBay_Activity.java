@@ -2,11 +2,24 @@ package com.example.a124lttd04_travelappproject.view.flight;
 
 import android.content.Context;
 import android.content.Intent;
+<<<<<<< HEAD
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+=======
+import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.Nullable;
@@ -28,10 +41,19 @@ public class plane_XacNhanGiaChuyenBay_Activity extends AppCompatActivity {
     Button xng;
     TextView xng1;
     TextView khoiluong;
+<<<<<<< HEAD
 
     TextView TongTien;
     MaterialButton ThanhToan;
     Button Exit;
+=======
+    String TAG="//++";
+    TextView TongTien;
+    MaterialButton ThanhToan;
+    Button Exit;
+
+    EditText soluongvemua;
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,12 +65,37 @@ public class plane_XacNhanGiaChuyenBay_Activity extends AppCompatActivity {
         Exit=findViewById(R.id.exit);
         khoiluong=findViewById(R.id.khoiluong);
         TongTien=findViewById(R.id.tongtien);
+<<<<<<< HEAD
+=======
+        soluongvemua=findViewById(R.id.soluongve);
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main3), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+<<<<<<< HEAD
 
+=======
+        soluongvemua.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (hasFocus) {
+                    // Khi EditText được chọn, xóa văn bản
+                    if (soluongvemua.getText().toString().equals("Nhập số lượng vé")) {
+                        soluongvemua.setText("");
+                        soluongvemua.setTextColor(Color.BLACK); // Đặt màu chữ nếu cần
+                    }
+                } else {
+                    // Khi mất tiêu điểm, kiểm tra nếu rỗng thì đặt lại văn bản
+                    if (soluongvemua.getText().toString().isEmpty()) {
+                        soluongvemua.setText("Nhập số lượng vé");
+                        soluongvemua.setTextColor(Color.parseColor("#A09F9F")); // Đặt lại màu chữ
+                    }
+                }
+            }
+        });
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
         String selectKhoiLuong= getIntent().getStringExtra("khoiluong");
         if (selectKhoiLuong != null) {
             khoiluong.setText(selectKhoiLuong); // Set the text of the TextView
@@ -56,6 +103,7 @@ public class plane_XacNhanGiaChuyenBay_Activity extends AppCompatActivity {
         String selectTongTien= getIntent().getStringExtra("Tongtien");
         if (selectTongTien != null) {
             if (selectTongTien.equals("230,000 VND")) {
+<<<<<<< HEAD
                 TongTien.setText("1,738,651 VND");
             }
             else if (selectTongTien.equals("420,000 VND")) {
@@ -63,6 +111,15 @@ public class plane_XacNhanGiaChuyenBay_Activity extends AppCompatActivity {
             }
             else if (selectTongTien.equals("490,000 VND")) {
                 TongTien.setText("2,198,651 VND");
+=======
+                TongTien.setText("2,730,651 VND");
+            }
+            else if (selectTongTien.equals("420,000 VND")) {
+                TongTien.setText("2,920,500 VND");
+            }
+            else if (selectTongTien.equals("490,000 VND")) {
+                TongTien.setText("2,990,500 VND");
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
             }
         }
 
@@ -109,12 +166,33 @@ public class plane_XacNhanGiaChuyenBay_Activity extends AppCompatActivity {
         ThanhToan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+<<<<<<< HEAD
+=======
+
+                String soluongText = soluongvemua.getText().toString().trim();
+                int solv;
+                try {
+                    solv = Integer.parseInt(soluongText);
+                } catch (NumberFormatException e) {
+                    solv = 0; // Hoặc xử lý lỗi theo cách khác
+                }
+
+                SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putInt("soluongve", solv);
+                editor.apply();
+
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
                 Context context = v.getContext(); // Lấy context từ view
                 Intent m= new Intent(plane_XacNhanGiaChuyenBay_Activity.this, plane_ChuyenBay_ThanhToan_Activity.class);
                 m.putExtra("thanhtoan", TongTien.getText().toString());
                 context.startActivity(m);
             }
         });
+<<<<<<< HEAD
+=======
+
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
         xng1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

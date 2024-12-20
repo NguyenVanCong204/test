@@ -2,7 +2,10 @@ package com.example.a124lttd04_travelappproject.adapter.hotel;
 
 import android.content.Context;
 import android.content.Intent;
+<<<<<<< HEAD
 import android.content.SharedPreferences;
+=======
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -53,6 +56,7 @@ public class hotel_phongkhachsan_Adapter extends RecyclerView.Adapter<hotel_phon
         String giaHienThi = decimalFormat.format(gia);
         holder.tvPriceRoom.setText(giaHienThi + " VND");
         holder.itemView.setOnClickListener(v -> {
+<<<<<<< HEAD
             Intent intent = new Intent(context, hotel_MainInf_Activity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             // Truyền giá phòng qua Intent
@@ -65,6 +69,18 @@ public class hotel_phongkhachsan_Adapter extends RecyclerView.Adapter<hotel_phon
             editor.putInt("soNguoi",listPhong.getSoluongnguoi());
             editor.apply();
 
+=======
+            // Handle click event here, such as starting a new activity
+            Intent intent = new Intent(context, hotel_MainInf_Activity.class); // Chuyển sang giao diện khác
+
+            // Thêm FLAG_ACTIVITY_NEW_TASK để tránh lỗi khi khởi động từ Adapter
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+            // Truyền dữ liệu nếu cần
+            // intent.putExtra("category", category);
+
+            context.startActivity(intent); // Bắt đầu Activity mới
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
         });
     }
 

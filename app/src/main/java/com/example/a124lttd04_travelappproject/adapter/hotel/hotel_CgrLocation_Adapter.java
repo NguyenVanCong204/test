@@ -35,6 +35,10 @@ public class hotel_CgrLocation_Adapter extends RecyclerView.Adapter<hotel_CgrLoc
     @Override
     public cgrLocationViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.hotel_item_categorylocation,parent,false);
+<<<<<<< HEAD
+=======
+
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
         return new cgrLocationViewHolder(view);
     }
 

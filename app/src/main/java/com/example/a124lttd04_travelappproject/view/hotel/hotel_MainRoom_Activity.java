@@ -1,7 +1,10 @@
 package com.example.a124lttd04_travelappproject.view.hotel;
 
 import android.content.Intent;
+<<<<<<< HEAD
 import android.content.SharedPreferences;
+=======
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
@@ -169,12 +172,15 @@ public class hotel_MainRoom_Activity extends AppCompatActivity {
                     for (hotel_phongkhachsan_Model room : allRooms) {
                         if (room.getMakhachsan() == maKhachSan) {
                             mlistPhong.add(room);
+<<<<<<< HEAD
 
                             // Lưu maphong vào SharedPreferences
                             SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
                             SharedPreferences.Editor editor = sharedPreferences.edit();
                             editor.putInt("maphong", room.getMaphong());
                             editor.apply();
+=======
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
                         }
                     }
 

@@ -23,7 +23,11 @@
         <!-- hotel -->
         <activity android:name=".view.hotel.hotel_MainActivityPay_Activity" android:exported="false" />
         <activity android:name=".view.hotel.hotel_MainInf_Activity" />
+<<<<<<< HEAD
         <activity android:name=".view.hotel.hotel_MainActivityAfterPay_Activity" />
+=======
+        <activity android:name=".view.hotel.hotel_MainActivityAfterPay_ACtivity" />
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
         <activity android:name=".view.hotel.hotel_Voucher" />
         <activity android:name=".view.hotel.hotel_MainRoom_Activity" />
         <activity android:name=".view.hotel.hotel_MainHome_Activity" />

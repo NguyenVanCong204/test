@@ -1,7 +1,10 @@
 package com.example.a124lttd04_travelappproject.view.hotel;
 
 import android.content.Intent;
+<<<<<<< HEAD
 import android.content.SharedPreferences;
+=======
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -22,6 +25,7 @@ import com.example.a124lttd04_travelappproject.view.tour.tour_Voucher;
 public class hotel_MainActivityPay_Activity extends AppCompatActivity {
     TextView Voucher;
     private ImageView imageView;
+<<<<<<< HEAD
     private String tenKhachSan;
     private String tenPhong;
     private int soNguoi;
@@ -30,6 +34,8 @@ public class hotel_MainActivityPay_Activity extends AppCompatActivity {
     private TextView tvCheckIn;
     private TextView tvCheckOut;
 
+=======
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +48,7 @@ public class hotel_MainActivityPay_Activity extends AppCompatActivity {
             return insets;
         });
 
+<<<<<<< HEAD
         SharedPreferences sharedPreferences = getSharedPreferences("HotelData", MODE_PRIVATE);
 
         tenKhachSan = sharedPreferences.getString("tenKhachSan", "");
@@ -80,6 +87,8 @@ public class hotel_MainActivityPay_Activity extends AppCompatActivity {
 
 
 
+=======
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
         imageView = findViewById(R.id.img_back_pay);
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,6 +97,7 @@ public class hotel_MainActivityPay_Activity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+<<<<<<< HEAD
 
         // Chuyển sang trang voucher
         Voucher=findViewById(R.id.voucher);
@@ -97,6 +107,12 @@ public class hotel_MainActivityPay_Activity extends AppCompatActivity {
                 String tongtien = tvTotalPrice.getText().toString();
                 Intent m = new Intent(hotel_MainActivityPay_Activity.this, hotel_Voucher.class);
                 m.putExtra("tongtien",tongtien);// Kiểm tra lớp đích
+=======
+        Voucher=findViewById(R.id.voucher);Voucher.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent m = new Intent(hotel_MainActivityPay_Activity.this, hotel_Voucher.class); // Kiểm tra lớp đích
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
                 startActivity(m);
             }
         });

@@ -81,8 +81,13 @@
                         android:id="@+id/editText_check_in"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+<<<<<<< HEAD
                         android:layout_marginLeft="10dp"
                         android:hint="Ngày nhận phòng" />
+=======
+                        android:hint="Ngày nhận phòng"
+                        android:layout_marginLeft="10dp"/>
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
 
                 </LinearLayout>
 
@@ -122,6 +127,10 @@
                         android:hint="Ngày trả phòng"
                         android:layout_marginLeft="30dp"
                         android:padding="5dp"/>
+<<<<<<< HEAD
+=======
+
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -129,6 +138,7 @@
                         android:background="@android:color/darker_gray">
 
                     </View>
+<<<<<<< HEAD
                     <TextView
                         android:id="@+id/editText_room_number"
                         android:layout_width="match_parent"
@@ -136,6 +146,8 @@
                         android:hint="Nhập số phòng"
                         android:inputType="number"
                         android:alpha="0"/>
+=======
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
                 </LinearLayout>
 
             </LinearLayout>
@@ -320,7 +332,10 @@
                     </TextView>
 
                     <TextView
+<<<<<<< HEAD
                         android:id="@+id/TongTien"
+=======
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -329,7 +344,10 @@
                         android:textSize="18dp"
                         android:textStyle="bold">
                     </TextView>
+<<<<<<< HEAD
 
+=======
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
                 </LinearLayout>
 
                 <com.google.android.material.button.MaterialButton

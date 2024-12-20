@@ -8,7 +8,11 @@ android {
 
     defaultConfig {
         applicationId = "com.example.a124lttd04_travelappproject"
+<<<<<<< HEAD
         minSdk = 26
+=======
+        minSdk = 24
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"

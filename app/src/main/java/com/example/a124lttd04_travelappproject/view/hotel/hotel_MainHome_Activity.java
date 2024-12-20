@@ -1,10 +1,20 @@
 package com.example.a124lttd04_travelappproject.view.hotel;
 
 import android.content.Intent;
+<<<<<<< HEAD
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+=======
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.Toast;
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -30,12 +40,18 @@ import com.example.a124lttd04_travelappproject.view.tour.tour_DatVe_ClickDatNgay
 import com.example.a124lttd04_travelappproject.view.tour.tour_Tour_Activity;
 
 public class hotel_MainHome_Activity extends AppCompatActivity {
+<<<<<<< HEAD
 
+=======
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
     private RecyclerView rcv;
     private RecyclerView rcv_location;
     private hotel_Hotel2_Home_Adapter cgrAdapter;
     private hotel_CgrLocation_Adapter cgrlocationAdapter;
+<<<<<<< HEAD
 
+=======
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
     private ImageView imageView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -152,7 +168,10 @@ public class hotel_MainHome_Activity extends AppCompatActivity {
             }
         });
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
     private void openPlanePageActivity() {
         Intent intent = new Intent(hotel_MainHome_Activity.this, plane_VeMayBay_Activity.class);
         startActivity(intent);

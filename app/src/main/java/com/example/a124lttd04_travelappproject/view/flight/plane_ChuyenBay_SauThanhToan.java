@@ -18,9 +18,17 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.a124lttd04_travelappproject.R;
 import com.example.a124lttd04_travelappproject.view.hotel.Taikhoan;
+<<<<<<< HEAD
 import com.example.a124lttd04_travelappproject.view.hotel.hotel_MainHome_Activity;
 import com.example.a124lttd04_travelappproject.view.hotel.hotel_MainHotel_Activity;
 import com.example.a124lttd04_travelappproject.view.tour.tour_ThanhToanThanhCong_Activity;
+=======
+import com.example.a124lttd04_travelappproject.view.hotel.hotel_MainActivityAfterPay_ACtivity;
+import com.example.a124lttd04_travelappproject.view.hotel.hotel_MainHome_Activity;
+import com.example.a124lttd04_travelappproject.view.hotel.hotel_MainHotel_Activity;
+import com.example.a124lttd04_travelappproject.view.tour.tour_ThanhToanThanhCong_Activity;
+import com.example.a124lttd04_travelappproject.view.tour.tour_Tour_Activity;
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class plane_ChuyenBay_SauThanhToan extends AppCompatActivity {

@@ -1,5 +1,11 @@
 package com.example.a124lttd04_travelappproject.adapter.flight;
 
+<<<<<<< HEAD
+=======
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +18,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.example.a124lttd04_travelappproject.R;
 import com.example.a124lttd04_travelappproject.model.flight.plane_GiaVeQuocTe_Model;
+<<<<<<< HEAD
+=======
+import com.example.a124lttd04_travelappproject.view.flight.plane_XacNhanGiaChuyenBay_Activity;
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
 
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
@@ -35,6 +45,12 @@ public class plane_GiaVeQuocTe_Adapter extends RecyclerView.Adapter<plane_GiaVeQ
     @Override
     public void onBindViewHolder(@NonNull GiaVeViewHolder holder, int position) {
         plane_GiaVeQuocTe_Model giave= Giave.get(position);
+<<<<<<< HEAD
+=======
+
+        int mavemaybay=giave.getMavemaybay();
+
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
         if(giave==null){
             return;
         }
@@ -58,6 +74,22 @@ public class plane_GiaVeQuocTe_Adapter extends RecyclerView.Adapter<plane_GiaVeQ
         DecimalFormat decimalFormat = new DecimalFormat("#,###");
         String giaHienThi = decimalFormat.format(gia); // Thêm đơn vị VND
         holder.tvGia.setText(giaHienThi);
+<<<<<<< HEAD
+=======
+
+        holder.itemView.setOnClickListener(v -> {
+            // Lưu mavemaybay vào SharedPreferences
+            SharedPreferences sharedPreferences = holder.itemView.getContext().getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putInt("mavemaybay", mavemaybay); // Thay đổi theo tên biến đúng
+            editor.putFloat("giave", (float) gia); // Lưu giá vé
+            editor.apply();
+
+            // Chuyển đến trang mới
+            Intent intent = new Intent(holder.itemView.getContext(), plane_XacNhanGiaChuyenBay_Activity.class); // Thay NewActivity bằng tên Activity bạn muốn chuyển đến
+            holder.itemView.getContext().startActivity(intent);
+        });
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
     }
 
     @Override

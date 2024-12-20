@@ -2,11 +2,17 @@ package com.example.a124lttd04_travelappproject.view.hotel;
 
 import android.content.Intent;
 import android.os.Bundle;
+<<<<<<< HEAD
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+=======
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.Nullable;
@@ -14,6 +20,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+<<<<<<< HEAD
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -51,6 +58,25 @@ public class hotel_Voucher extends AppCompatActivity {
         setContentView(R.layout.hotel_activity_voucher);
 
         // Thiết lập Edge to Edge
+=======
+
+import com.example.a124lttd04_travelappproject.R;
+import com.example.a124lttd04_travelappproject.view.tour.tour_DatVe_SauThanhToan_Activity;
+import com.example.a124lttd04_travelappproject.view.tour.tour_Voucher;
+
+public class hotel_Voucher extends AppCompatActivity {
+    boolean check=true;
+    Button giamgia;
+    Button xacnhan;
+    TextView tongtien;
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+
+
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.hotel_activity_voucher);
+
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
         EdgeToEdge.enable(this);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.voucher), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -58,6 +84,7 @@ public class hotel_Voucher extends AppCompatActivity {
             return insets;
         });
 
+<<<<<<< HEAD
         recyclerView = findViewById(R.id.rcv_voucher);
         recyclerView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
         recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
@@ -129,4 +156,30 @@ public class hotel_Voucher extends AppCompatActivity {
     private void updateTotalTextView() {
         tv_tongtien.setText(String.format("%,.0f VND", currentTotal));
     }
+=======
+        giamgia=findViewById(R.id.applygiamgia);
+        tongtien=findViewById(R.id.TongTien);
+        xacnhan=findViewById(R.id.xacnhan);
+        giamgia.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(check==true){
+                    tongtien.setText("1.573.528 VND (TCBDOMBAY)");
+                    check=false;
+                }
+                else {
+                    tongtien.setText("1.773.528 VND");
+                    check=true;
+                }
+            }
+        });
+        xacnhan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent m = new Intent(hotel_Voucher.this, hotel_MainActivityAfterPay_ACtivity.class); // Kiểm tra lớp đích
+                startActivity(m);
+            }
+        });
+    }
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
 }

@@ -3,9 +3,14 @@ package com.example.a124lttd04_travelappproject.view.flight;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+<<<<<<< HEAD
 import android.view.View;
 import android.widget.Button;
 import android.util.Log;
+=======
+import android.util.Log;
+import android.view.View;
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -26,8 +31,11 @@ import com.example.a124lttd04_travelappproject.view.hotel.hotel_MainHome_Activit
 import com.google.android.material.button.MaterialButton;
 import com.google.gson.Gson;
 
+<<<<<<< HEAD
 import java.util.ArrayList;
 
+=======
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
 import retrofit2.Call;
 import retrofit2.Callback;
 
@@ -104,8 +112,11 @@ public class plane_LogIn_Activity extends AppCompatActivity {
         });
     }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
     private void loginUser() {
         TaoKhoanModel userData = new TaoKhoanModel();
         userData.setTaikhoan(editTextEmail.getText().toString());
@@ -123,6 +134,10 @@ public class plane_LogIn_Activity extends AppCompatActivity {
                 // Xử lý phản hồi
                 if (response.isSuccessful() && response.body() != null) {
                     if (response.body().getStatus() == 200) {
+<<<<<<< HEAD
+=======
+                        // Đăng nhập thành công
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
                         Object data = response.body().getData(); // Lấy dữ liệu từ phản hồi
 
                         // Chuyển đổi dữ liệu sang TaoKhoanModel
@@ -135,7 +150,11 @@ public class plane_LogIn_Activity extends AppCompatActivity {
                         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
                         SharedPreferences.Editor editor = sharedPreferences.edit();
                         editor.putInt("makh", makh);
+<<<<<<< HEAD
                         editor.apply();// Lưu thay đổi
+=======
+                        editor.apply(); // Lưu thay đổi
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
 
                         Intent intent = new Intent(plane_LogIn_Activity.this, hotel_MainHome_Activity.class);
                         startActivity(intent);

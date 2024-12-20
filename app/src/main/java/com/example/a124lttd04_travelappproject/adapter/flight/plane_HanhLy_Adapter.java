@@ -2,6 +2,10 @@ package com.example.a124lttd04_travelappproject.adapter.flight;
 
 import android.content.Context;
 import android.content.Intent;
+<<<<<<< HEAD
+=======
+import android.content.SharedPreferences;
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -43,6 +47,12 @@ public class plane_HanhLy_Adapter extends RecyclerView.Adapter<plane_HanhLy_Adap
     @Override
     public void onBindViewHolder(@NonNull HanhLyViewHolder holder, int position) {
         HanhLyModel hanhly = HanhLy.get(position);
+<<<<<<< HEAD
+=======
+
+        int mahanhly=hanhly.getMahanhly();
+
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
         if (hanhly == null) {
             return;
         }
@@ -59,6 +69,16 @@ public class plane_HanhLy_Adapter extends RecyclerView.Adapter<plane_HanhLy_Adap
             Intent intent = new Intent(context, plane_XacNhanGiaChuyenBay_Activity.class); // Thay YourTargetActivity bằng Activity mà bạn muốn chuyển tới
             intent.putExtra("khoiluong", String.valueOf(hanhly.getKhoiluong())+" KG"); // Truyền giá trị khoiluong
             intent.putExtra("Tongtien", giaHienThi);
+<<<<<<< HEAD
+=======
+
+            SharedPreferences sharedPreferences = holder.itemView.getContext().getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putInt("mahanhly", mahanhly); // Thay đổi theo tên biến đúng
+            editor.apply();
+
+
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
             context.startActivity(intent); // Khởi động Activity mới
         });
     }

@@ -6,15 +6,17 @@ public class Response<T>{
 
     private T data;
 
-    public Response() {
-    }
 
-    public Response(int status, String message, T data) {
+
+
+
+    public Response(int makh, int status, String message, T data) {
         this.status = status;
         this.message = message;
         this.data = data;
     }
-
+    public Response() {
+    }
     public int getStatus() {
         return status;
     }

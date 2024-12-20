@@ -6,8 +6,13 @@ import java.util.Date;
 
 public class plane_GiaVeNoiDia_Model {
     @SerializedName("_ID")
+<<<<<<< HEAD
         private int mavemaybay;
         private String tenvemaybay;
+=======
+        private String tenvemaybay;
+        private int mavemaybay;
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
         private String noidi;
         private String noiden;
 

@@ -2,7 +2,10 @@ package com.example.a124lttd04_travelappproject.adapter.hotel;
 
 import android.content.Context;
 import android.content.Intent;
+<<<<<<< HEAD
 import android.content.SharedPreferences;
+=======
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -66,6 +69,7 @@ public class hotel_khachsan_Adapter extends RecyclerView.Adapter<hotel_khachsan_
             intent.putExtra("hinhanh", ks.getHinhanh());        // Truyền đường dẫn hoặc tên ảnh
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(intent);
+<<<<<<< HEAD
 
             SharedPreferences sharedPreferences = context.getSharedPreferences("HotelData", Context.MODE_PRIVATE);
             SharedPreferences.Editor editor = sharedPreferences.edit();
@@ -74,6 +78,9 @@ public class hotel_khachsan_Adapter extends RecyclerView.Adapter<hotel_khachsan_
         });
 
 
+=======
+        });
+>>>>>>> eacce588508483ac794f56ee58d84522b302fb2e
     }
 
     @Override
