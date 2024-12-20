@@ -215,7 +215,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hành khách"
+                android:text="Số lượng vé đặt"
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:textSize="18dp"
@@ -231,21 +231,24 @@
                 android:layout_marginTop="10dp"
                 >
 
-                <TextView
+                <EditText
+                    android:id="@+id/soluongve"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Người lớn 1"
+                    android:text="Nhập số lượng vé"
+                    android:layout_weight="1"
                     android:layout_gravity="center"
                     android:textSize="17dp"
-                    android:textColor="@color/black"
-                    android:layout_marginLeft="10dp">
-                </TextView>
+                    android:layout_marginLeft="10dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:textColor="#A09F9F">
+                </EditText>
                 <Button
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:background="@drawable/add"
                     android:layout_gravity="center"
-                    android:layout_marginLeft="230dp">
+                    android:layout_marginRight="20dp">
 
                 </Button>
             </LinearLayout>
@@ -401,7 +404,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/tongtien"
-                    android:text="1.508.651 VND"
+                    android:text="2.500.500 VND"
                     android:textColor="#F34602"
                     android:textStyle="bold"
                     android:textSize="18dp"

@@ -1,5 +1,6 @@
 package com.example.a124lttd04_travelappproject.CongServices;
 
+import com.example.a124lttd04_travelappproject.model.flight.DatVeMayBayModel;
 import com.example.a124lttd04_travelappproject.model.flight.HanhLyModel;
 import com.example.a124lttd04_travelappproject.model.flight.NoidenModel;
 import com.example.a124lttd04_travelappproject.model.flight.NoidiModel;
@@ -48,4 +49,6 @@ public interface ApiService {
 
     @POST("insert")
     Call<Response> Insert(@Body TaoTaiKhoanModel NewUserData);
+    @POST("insertdatvemaybay")
+    Call<Response> Insertdatvemaybay(@Body DatVeMayBayModel NewdatveData);
 }

@@ -1,10 +1,13 @@
 package com.example.a124lttd04_travelappproject.view.hotel;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -30,12 +33,10 @@ import com.example.a124lttd04_travelappproject.view.tour.tour_DatVe_ClickDatNgay
 import com.example.a124lttd04_travelappproject.view.tour.tour_Tour_Activity;
 
 public class hotel_MainHome_Activity extends AppCompatActivity {
-
     private RecyclerView rcv;
     private RecyclerView rcv_location;
     private hotel_Hotel2_Home_Adapter cgrAdapter;
     private hotel_CgrLocation_Adapter cgrlocationAdapter;
-
     private ImageView imageView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -152,7 +153,6 @@ public class hotel_MainHome_Activity extends AppCompatActivity {
             }
         });
     }
-
     private void openPlanePageActivity() {
         Intent intent = new Intent(hotel_MainHome_Activity.this, plane_VeMayBay_Activity.class);
         startActivity(intent);

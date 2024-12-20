@@ -2,13 +2,17 @@ package com.example.a124lttd04_travelappproject.view.flight;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,7 +20,12 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.a124lttd04_travelappproject.CongServices.ApiService;
+import com.example.a124lttd04_travelappproject.CongServices.HttpRequest;
 import com.example.a124lttd04_travelappproject.R;
+import com.example.a124lttd04_travelappproject.model.flight.DatVeMayBayModel;
+import com.example.a124lttd04_travelappproject.model.flight.Response;
+import com.example.a124lttd04_travelappproject.model.flight.TaoTaiKhoanModel;
 import com.example.a124lttd04_travelappproject.view.hotel.Taikhoan;
 import com.example.a124lttd04_travelappproject.view.hotel.hotel_MainHome_Activity;
 import com.example.a124lttd04_travelappproject.view.hotel.hotel_MainHotel_Activity;
@@ -24,9 +33,13 @@ import com.example.a124lttd04_travelappproject.view.tour.tour_ThanhToanThanhCong
 import com.example.a124lttd04_travelappproject.view.tour.tour_Tour_Activity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+
 public class plane_ChuyenBay_ThanhToan_Activity extends AppCompatActivity {
     Button Thoat;
     private TextView timerTextView;
+    String TAG="//++";
     private TextView Tongtien;
     private TextView voucher;
     private CountDownTimer countDownTimer;
@@ -89,6 +102,7 @@ public class plane_ChuyenBay_ThanhToan_Activity extends AppCompatActivity {
         thanhToanThanhCong.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                CreateDatVeNewUser();
                 Intent m = new Intent(plane_ChuyenBay_ThanhToan_Activity.this, tour_ThanhToanThanhCong_Activity.class);
                 startActivity(m);
             }
@@ -136,5 +150,52 @@ public class plane_ChuyenBay_ThanhToan_Activity extends AppCompatActivity {
         if (countDownTimer != null) {
             countDownTimer.cancel(); // Dừng đồng hồ khi Activity bị hủy
         }
+    }
+    private void CreateDatVeNewUser() {
+        DatVeMayBayModel userData = new DatVeMayBayModel();
+
+        SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+        int makh = sharedPreferences.getInt("makh", -1); // -1 là giá trị mặc định
+        int mavemaybay = sharedPreferences.getInt("mavemaybay", -1); // null là giá trị mặc định
+        float giave = sharedPreferences.getFloat("giave", -1.0f); // null là giá trị mặc định
+        int hanhly = sharedPreferences.getInt("mahanhly", -1); // null là giá trị mặc định
+        int slv = sharedPreferences.getInt("soluongve", -1); // null là giá trị mặc định
+        float tongtien=slv*giave;
+
+        userData.setSoluogve(slv);
+        userData.setMakh(makh);
+        userData.setMavemaybay(mavemaybay);
+        userData.setTongtien(tongtien);
+        userData.setMahanhly(hanhly);
+
+        HttpRequest httpRequest = new HttpRequest();
+        ApiService apiService = httpRequest.callAPI();
+
+        Call<Response> call = apiService.Insertdatvemaybay(userData);
+
+        call.enqueue(new Callback<Response>() {
+            @Override
+            public void onResponse(Call<Response> call, retrofit2.Response<Response> response) {
+                // Xử lý phản hồi
+                if (response.isSuccessful() && response.body() != null) {
+                    if (response.body().getStatus() == 200) {
+                        // Chèn thành công
+                        Log.i(TAG, "Đặt vé máy bay thành công!");
+                    } else {
+                        Log.i(TAG, "Chèn thất bại: " + response.body().getMessage());
+                        Toast.makeText(plane_ChuyenBay_ThanhToan_Activity.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+                    Log.i(TAG, "Phản hồi không thành công hoặc body là null");
+                    Toast.makeText(plane_ChuyenBay_ThanhToan_Activity.this, "Đặt vé máy bay không thành công!", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Response> call, Throwable t) {
+                Log.i(TAG, "Lỗi: " + t.getMessage());
+                Toast.makeText(plane_ChuyenBay_ThanhToan_Activity.this, "Lỗi kết nối: " + t.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }

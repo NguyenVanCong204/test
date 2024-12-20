@@ -1,10 +1,10 @@
 package com.example.a124lttd04_travelappproject.view.flight;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 import android.util.Log;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -23,8 +23,7 @@ import com.example.a124lttd04_travelappproject.model.flight.Response;
 import com.example.a124lttd04_travelappproject.model.flight.TaoKhoanModel;
 import com.example.a124lttd04_travelappproject.view.hotel.hotel_MainHome_Activity;
 import com.google.android.material.button.MaterialButton;
-
-import java.util.ArrayList;
+import com.google.gson.Gson;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -102,8 +101,6 @@ public class plane_LogIn_Activity extends AppCompatActivity {
         });
     }
 
-
-
     private void loginUser() {
         TaoKhoanModel userData = new TaoKhoanModel();
         userData.setTaikhoan(editTextEmail.getText().toString());
@@ -122,7 +119,20 @@ public class plane_LogIn_Activity extends AppCompatActivity {
                 if (response.isSuccessful() && response.body() != null) {
                     if (response.body().getStatus() == 200) {
                         // Đăng nhập thành công
-                        Log.i(TAG, "Đăng nhập thành công! Tài khoản: " + editTextEmail);
+                        Object data = response.body().getData(); // Lấy dữ liệu từ phản hồi
+
+                        // Chuyển đổi dữ liệu sang TaoKhoanModel
+                        TaoKhoanModel userData = new Gson().fromJson(data.toString(), TaoKhoanModel.class);
+                        int makh = userData.getMakh(); // Lấy mã khách hàng
+
+                        Log.i(TAG, "Đăng nhập thành công! Tài khoản: " + userData.getTaikhoan());
+
+                        // Lưu mã khách hàng vào SharedPreferences
+                        SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        editor.putInt("makh", makh);
+                        editor.apply(); // Lưu thay đổi
+
                         Intent intent = new Intent(plane_LogIn_Activity.this, hotel_MainHome_Activity.class);
                         startActivity(intent);
                         finish();

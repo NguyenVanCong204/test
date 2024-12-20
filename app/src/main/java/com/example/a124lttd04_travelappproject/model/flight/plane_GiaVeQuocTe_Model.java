@@ -6,8 +6,9 @@ import java.util.Date;
 
 public class plane_GiaVeQuocTe_Model {
     @SerializedName("_ID")
-    private int mavemaybay;
+
     private String tenvemaybay;
+    private int mavemaybay;
     private String noidi;
     private String noiden;
 
