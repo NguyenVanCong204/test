@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/voucher_background"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <!-- Thêm hình ảnh voucher nằm ở bên trái -->
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="115dp"
+            android:layout_marginEnd="12dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/voucher" />
+
+        <!-- Các thông tin voucher nằm ngang -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!-- Tiêu đề Voucher -->
+            <TextView
+                android:id="@+id/tv_tenvoucher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="Tiết kiệm 200.000 VNĐ cho tất cả vé khách sạn"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- Mô tả Voucher -->
+
+            <!-- Phần Giảm Giá -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:gravity="start|center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_giamgia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="10dp"
+                    android:text="10%"
+                    android:textColor="#FF5733"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <!-- Giới hạn giảm giá -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="Giảm tối đa 200k"
+                    android:textColor="#FF5733"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- Phần ưu đãi -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:text="Ưu đãi dành cho bạn"
+                android:textColor="#1ECED3"
+                android:textSize="14sp" />
+        </LinearLayout>
+        <CheckBox
+            android:id="@+id/checkbox_voucher"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="end">
+
+        </CheckBox>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
